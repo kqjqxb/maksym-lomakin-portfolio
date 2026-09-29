@@ -360,7 +360,12 @@
   .job li::marker { color: var(--accent-soft); }
   .job .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
   .tag { font-family: var(--mono); font-size: 11.5px; color: var(--text-dim); padding: 4px 10px; border-radius: 8px; background: rgba(255,255,255,0.04); border: 1px solid var(--border); }
+  .job ul.job-kpis { list-style: none; padding: 0; margin: 0 0 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .job-kpis li { margin: 0; padding: 12px 14px; border-radius: 14px; background: var(--accent-dim); border: 1px solid var(--accent-line); }
+  .job-kpis strong { display: block; font-family: var(--display); font-weight: 600; font-size: 20px; color: var(--text); letter-spacing: -0.01em; line-height: 1.2; }
+  .job-kpis span { display: block; font-size: 13px; color: var(--text-dim); line-height: 1.35; margin-top: 2px; }
   @media (max-width: 760px) { .job { grid-template-columns: 1fr; gap: 10px; padding: 22px; } }
+  @media (max-width: 520px) { .job ul.job-kpis { grid-template-columns: 1fr; } }
 
   /* ── App Store band ───────────────────────────────────────────────── */
   .band { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(24px, 5vw, 64px); align-items: center; padding: clamp(28px, 5vw, 52px);
@@ -466,7 +471,9 @@
   <!-- ── Hero ───────────────────────────────────────────────────────── -->
   <section class="wrap hero">
     <div class="reveal">
+      <!-- Hidden for now – uncomment to show the availability badge.
       <span class="status"><span class="pulse"></span>Open to senior roles · Warsaw · Remote / hybrid</span>
+      -->
       <h1>I ship web &amp; mobile products <span class="glow-word">end&#8209;to&#8209;end</span> – and build them with AI agents.</h1>
       <p class="lead">Senior React &amp; React Native engineer with 5+ years across web, iOS and Android. High-traffic web services, internal tools, apps on the App Store – I own them from architecture to release and beyond, with an agentic Claude Code workflow that lets me deliver at the pace of a small team.</p>
       <p class="rotator" aria-hidden="true"><span class="t-dim">~/currently $</span> <span class="typed" id="typed"></span><span class="caret"></span></p>
@@ -621,7 +628,7 @@
       <ul class="case-facts reveal">
         <li><strong>~26k</strong> lines of TypeScript + Swift</li>
         <li><strong>199</strong> commits since May 2026</li>
-        <li>Built with a <strong>Claude Code</strong> agentic workflow</li>
+        <li><strong>51</strong> unit tests</li>
         <li><strong>99.9%</strong> crash-free</li>
         <li>No ads · privacy-first</li>
       </ul>
@@ -825,7 +832,7 @@
           <li><span class="when">Tooling</span><h3>Claude Code + MCP</h3><p>Context7 for current docs, Figma MCP for design-accurate UI.</p></li>
           <li><span class="when">Jun–Jul 2026</span><h3>Custom subagents</h3><p>8 versioned agents for QA, fixes, audits and product reviews.</p></li>
           <li><span class="when">Jun–Jul 2026</span><h3>Agents in product</h3><p>4 multi-step Claude agents shipped inside MyDevLog.</p></li>
-          <li><span class="when">May–Sep 2026</span><h3>Solo at team pace</h3><p>Peacera built and released with an agentic workflow.</p></li>
+          <li><span class="when">May–Sep 2026</span><h3>Solo at team pace</h3><p>Peacera: I own the architecture and review every diff, agents take the routine.</p></li>
           <li><span class="when">Now</span><h3>Sharing it</h3><p>Writing on LinkedIn and publishing a live devlog of real agent runs.</p></li>
         </ol>
       </div>
@@ -847,6 +854,11 @@
           <div>
             <h3>Full Stack Engineer – React Native, React &amp; Backend</h3>
             <p class="company">End-to-end ownership of web and mobile products, from architecture to release and post-release monitoring.</p>
+            <ul class="job-kpis">
+              <li><strong>8+</strong><span>internal services built and maintained</span></li>
+              <li><strong>4</strong><span>developers mentored and supported</span></li>
+              <li><strong>Web + mobile</strong><span>load-testing process set up</span></li>
+            </ul>
             <ul>
               <li>Built high-load, user-facing React web services; built and maintained 8+ internal services and tools for the team</li>
               <li>Set up load-testing processes for the mobile app and web services</li>
@@ -977,7 +989,7 @@
         <div class="card skill-group reveal"><h3>Release &amp; quality</h3><div class="tags">
           <span class="tag hot">Fastlane</span><span class="tag">App Store Connect</span><span class="tag">Codemagic</span><span class="tag">GitHub Actions</span><span class="tag">Bitrise</span><span class="tag">Jest</span><span class="tag">Maestro E2E</span><span class="tag">Crashlytics</span></div></div>
       </div>
-      <p class="reveal" style="margin-top: 24px; color: var(--text-faint); font-size: 14.5px">Languages: Ukrainian (native) · English (B2) · Education: B.Sc. Software Engineering (in progress), Igor Sikorsky Kyiv Polytechnic Institute</p>
+      <p class="reveal" style="margin-top: 24px; color: var(--text-faint); font-size: 14.5px">Languages: Ukrainian (native) · English (B2)</p>
     </div>
   </section>
 
