@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Maksym Lomakin – Senior React Native Engineer</title>
-<meta name="description" content="Senior React Native engineer with 5+ years shipping iOS, Android and web apps end-to-end – from architecture to App Store release. Builds with AI agents: Claude Code subagents, MCP and multi-step agents on the Anthropic API.">
+<title>Maksym Lomakin – Senior React &amp; React Native Engineer</title>
+<meta name="description" content="Senior React and React Native engineer with 5+ years shipping web, iOS and Android products end-to-end – from high-traffic web services and internal tools to App Store releases. Builds with AI agents: Claude Code subagents, MCP and multi-step agents on the Anthropic API.">
 <meta name="theme-color" content="#05060d">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Maksym Lomakin – Senior React Native Engineer">
-<meta property="og:description" content="I ship React Native apps end-to-end – and build them with AI agents. Author of Peacera: Sleep & Focus on the App Store.">
+<meta property="og:title" content="Maksym Lomakin – Senior React &amp; React Native Engineer">
+<meta property="og:description" content="I ship web and mobile products end-to-end – and build them with AI agents. React, React Native, TypeScript, Node.js.">
 <meta property="og:image" content="https://kqjqxb.github.io/maksym-lomakin-portfolio/assets/maksym.png">
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -117,7 +117,7 @@
     .pulse { animation: pulse 2.2s ease-out infinite; }
     @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(111, 227, 195, 0.55); } 80%, 100% { box-shadow: 0 0 0 10px rgba(111, 227, 195, 0); } }
   }
-  .hero h1 { font-family: var(--display); font-weight: 600; font-size: clamp(38px, 6.2vw, 74px); line-height: 1.03; letter-spacing: -0.035em; margin: 0 0 22px; text-wrap: balance; }
+  .hero h1 { font-family: var(--display); font-weight: 600; font-size: clamp(36px, 5.2vw, 64px); line-height: 1.04; letter-spacing: -0.035em; margin: 0 0 22px; text-wrap: balance; }
   .glow-word { background: linear-gradient(100deg, #f4f2fb 0%, #a98ff5 50%, #f8be7e 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .hero .lead { font-size: clamp(17px, 1.6vw, 19.5px); color: var(--text-dim); max-width: 50ch; margin: 0 0 14px; }
   .rotator { font-family: var(--mono); font-size: 14.5px; color: var(--text-faint); margin: 0 0 32px; min-height: 1.6em; }
@@ -256,6 +256,31 @@
   .text-link svg { width: 16px; height: 16px; transition: transform 200ms ease; }
   .text-link:hover svg { transform: translate(2px, -2px); }
 
+  /* ── Web section ──────────────────────────────────────────────────── */
+  .web-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(20px, 3vw, 32px); align-items: center; }
+  .web-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .web-grid .card { padding: 22px; }
+  .web-grid h3 { font-size: 16.5px; }
+  .web-grid p { font-size: 14.5px; }
+  .code-card { margin: 0; border-radius: 18px; overflow: hidden; background: #0b0b16; border: 1px solid var(--border);
+    box-shadow: 0 40px 80px -40px rgba(97, 218, 251, 0.35), 0 0 0 1px rgba(0,0,0,0.4); }
+  .code-card .term-bar { gap: 7px; flex-wrap: nowrap; overflow: hidden; }
+  .code-tabs { display: flex; gap: 2px; margin-left: 10px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+  .code-tabs::-webkit-scrollbar { display: none; }
+  .code-tabs button { flex-shrink: 0; font-family: var(--mono); font-size: 11.5px; color: var(--text-faint); background: none; border: 0; padding: 4px 9px; border-radius: 7px; cursor: pointer; transition: color 150ms, background 150ms; }
+  .code-tabs button:hover { color: var(--text-dim); }
+  .code-tabs button.is-active { color: var(--text); background: rgba(255,255,255,0.08); }
+  .code-pane { display: none; margin: 0; padding: 18px 20px 20px; min-height: 222px; font-family: var(--mono); font-size: 12.5px; line-height: 1.75; color: #d9d4ea; overflow-x: auto; }
+  .code-pane.is-active { display: block; }
+  @media (prefers-reduced-motion: no-preference) {
+    .code-pane.is-active { animation: paneIn 400ms var(--ease); }
+    @keyframes paneIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  }
+  .code-pane .k { color: var(--accent-soft); } .code-pane .f { color: var(--mint); } .code-pane .s { color: var(--amber); } .code-pane .t { color: #61dafb; } .code-pane .c { color: #6f6a86; }
+  .code-card figcaption { padding: 12px 20px 16px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-faint); }
+  @media (max-width: 1020px) { .web-split { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) { .web-grid { grid-template-columns: 1fr; } }
+
   /* ── AI section ───────────────────────────────────────────────────── */
   .ai-split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 48px); align-items: start; }
   @media (max-width: 900px) { .ai-split { grid-template-columns: 1fr; } }
@@ -388,6 +413,7 @@
   .skill-group .tags { display: flex; flex-wrap: wrap; gap: 7px; }
   .skill-group .tag { font-family: inherit; font-size: 13.5px; padding: 6px 12px; border-radius: 999px; color: var(--text); }
   .skill-group .tag.hot { border-color: var(--accent-line); background: var(--accent-dim); }
+  .skill-group:last-child:nth-child(odd) { grid-column: 1 / -1; }
   @media (max-width: 760px) { .skills { grid-template-columns: 1fr; } }
 
   /* ── Contact ──────────────────────────────────────────────────────── */
@@ -426,6 +452,7 @@
     <a class="brand" href="#top"><img src="assets/maksym.png" alt=""><span>Maksym Lomakin</span></a>
     <nav class="nav-links" aria-label="Main">
       <a href="#peacera">Peacera</a>
+      <a href="#web">Web</a>
       <a href="#ai">AI engineering</a>
       <a href="#experience">Experience</a>
       <a href="#writing">Writing</a>
@@ -440,8 +467,8 @@
   <section class="wrap hero">
     <div class="reveal">
       <span class="status"><span class="pulse"></span>Open to senior roles · Warsaw · Remote / hybrid</span>
-      <h1>I ship mobile apps <span class="glow-word">end&#8209;to&#8209;end</span> – and build them with AI agents.</h1>
-      <p class="lead">Senior React Native engineer with 5+ years across iOS, Android and web. I own features from architecture to App Store release and beyond – and I designed my own agentic workflow with Claude Code to deliver at the pace of a small team.</p>
+      <h1>I ship web &amp; mobile products <span class="glow-word">end&#8209;to&#8209;end</span> – and build them with AI agents.</h1>
+      <p class="lead">Senior React &amp; React Native engineer with 5+ years across web, iOS and Android. High-traffic web services, internal tools, apps on the App Store – I own them from architecture to release and beyond, with an agentic Claude Code workflow that lets me deliver at the pace of a small team.</p>
       <p class="rotator" aria-hidden="true"><span class="t-dim">~/currently $</span> <span class="typed" id="typed"></span><span class="caret"></span></p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#peacera">See my app on the App Store
@@ -469,7 +496,7 @@
         <span class="orbit-chip" style="top: 12%; right: -2%; --c: #f8be7e; --delay: -1.5s"><i></i>Claude Code</span>
         <span class="orbit-chip" style="top: 46%; right: -8%; --c: #f05138; --delay: -3s"><i></i>Swift · WidgetKit</span>
         <span class="orbit-chip" style="bottom: 12%; right: 2%; --c: #6fe3c3; --delay: -2s"><i></i>TypeScript</span>
-        <span class="orbit-chip" style="bottom: 6%; left: 4%; --c: #ffca28; --delay: -4s"><i></i>Firebase</span>
+        <span class="orbit-chip" style="bottom: 6%; left: 4%; --c: #61dafb; --delay: -4s"><i></i>React · Next.js</span>
         <span class="orbit-chip" style="top: 44%; left: -8%; --c: #a98ff5; --delay: -1s"><i></i>Anthropic API</span>
       </div>
     </div>
@@ -486,8 +513,8 @@
       <div class="value-grid">
         <article class="card reveal">
           <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
-          <h3>Product-grade React Native</h3>
-          <p>Scalable architecture, TypeScript everywhere, Reanimated motion, tuned re-renders. Apps that feel native, not "cross-platform".</p>
+          <h3>React on web and mobile</h3>
+          <p>High-traffic React web services and internal tools, plus React Native apps that feel native. Same TypeScript, same standards, same ownership.</p>
         </article>
         <article class="card reveal" style="--rd: 80ms">
           <div class="icon-tile amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></div>
@@ -592,11 +619,89 @@
 
   <div class="divider"></div>
 
+  <!-- ── Web ───────────────────────────────────────────────────────── -->
+  <section class="section" id="web">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="num">03</span>Web</p>
+        <h2 class="title">React on the web, <span class="glow-word">at production scale</span></h2>
+        <p class="lead">At Upstars I build for the web as much as for mobile: high-traffic services real users depend on, and the internal tools the team runs on every day. React and React Native are one skill set to me, not two careers.</p>
+      </div>
+
+      <div class="web-split">
+        <div class="web-grid">
+          <article class="card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
+            <h3>High-load, user-facing services</h3>
+            <p>React + TypeScript web services under heavy traffic, where render performance, code splitting, caching and careful data fetching decide whether the product feels fast.</p>
+          </article>
+          <article class="card reveal" style="--rd: 80ms">
+            <div class="icon-tile amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 20V9"/></svg></div>
+            <h3>Internal tools &amp; dashboards</h3>
+            <p>Admin panels, dashboards and workflow tools the team relies on daily. They take manual work off people's plates and make data easy to act on.</p>
+          </article>
+          <article class="card reveal" style="--rd: 160ms">
+            <div class="icon-tile mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="19" cy="17" r="2"/></svg></div>
+            <h3>An API layer done right</h3>
+            <p>REST and GraphQL with typed queries, mutations, pagination and client caching, plus the Node.js / NestJS services, PostgreSQL and Docker on the other side.</p>
+          </article>
+          <article class="card reveal" style="--rd: 240ms">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="13" height="10" rx="1.5"/><rect x="16" y="8" width="6" height="12" rx="1.5"/><path d="M6 18h6"/></svg></div>
+            <h3>One codebase mindset</h3>
+            <p>Shared types, API clients and business logic between web and mobile, so a feature ships on both platforms without being written twice.</p>
+          </article>
+        </div>
+
+        <figure class="code-card reveal" style="--rd: 120ms">
+          <div class="term-bar"><i></i><i></i><i></i>
+            <div class="code-tabs" role="tablist" aria-label="Example files">
+              <button role="tab" data-tab="0">shared</button>
+              <button role="tab" data-tab="1">web</button>
+              <button role="tab" data-tab="2">mobile</button>
+            </div>
+          </div>
+<pre class="code-pane" data-pane="0"><span class="c">// shared/api/orders.ts</span>
+<span class="k">export const</span> <span class="f">useOrders</span> = (filter: <span class="t">OrderFilter</span>) =&gt;
+  <span class="f">useInfiniteQuery</span>({
+    queryKey: [<span class="s">'orders'</span>, filter],
+    queryFn: ({ pageParam }) =&gt;
+      api.orders.<span class="f">list</span>({ ...filter, cursor: pageParam }),
+    getNextPageParam: (last) =&gt; last.nextCursor,
+  });</pre>
+<pre class="code-pane" data-pane="1"><span class="c">// web/OrdersPage.tsx</span>
+<span class="k">import</span> { useOrders } <span class="k">from</span> <span class="s">'@shared/api'</span>;
+
+<span class="k">export function</span> <span class="f">OrdersPage</span>() {
+  <span class="k">const</span> { data, fetchNextPage } = <span class="f">useOrders</span>({ status: <span class="s">'active'</span> });
+  <span class="k">return</span> &lt;<span class="t">DataTable</span> rows={data} onEndReached={fetchNextPage} /&gt;;
+}</pre>
+<pre class="code-pane" data-pane="2"><span class="c">// mobile/OrdersScreen.tsx</span>
+<span class="k">import</span> { useOrders } <span class="k">from</span> <span class="s">'@shared/api'</span>;
+
+<span class="k">export function</span> <span class="f">OrdersScreen</span>() {
+  <span class="k">const</span> { data, fetchNextPage } = <span class="f">useOrders</span>({ status: <span class="s">'active'</span> });
+  <span class="k">return</span> &lt;<span class="t">FlashList</span> data={data} onEndReached={fetchNextPage} /&gt;;
+}</pre>
+          <figcaption>How I structure it: one typed data layer, a web page and a mobile screen on top.</figcaption>
+        </figure>
+      </div>
+
+      <ul class="case-facts reveal">
+        <li><strong>React.js</strong> · Next.js · Vite · Webpack</li>
+        <li>TanStack Query · RTK Query · GraphQL</li>
+        <li>Tailwind · MUI · responsive UI</li>
+        <li>Node.js · NestJS · PostgreSQL · Docker · GCP</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <!-- ── AI engineering ────────────────────────────────────────────── -->
   <section class="section" id="ai">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow"><span class="num">03</span>AI engineering</p>
+        <p class="eyebrow"><span class="num">04</span>AI engineering</p>
         <h2 class="title">I build <span class="glow-word">with</span> agents and I build agents</h2>
         <p class="lead">Two sides of the same skill: AI agents inside products, on the Anthropic API, and my own Claude Code subagents that help me build those products faster without losing quality.</p>
       </div>
@@ -668,7 +773,7 @@
   <section class="section" id="approach" style="padding-top: 0">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow"><span class="num">04</span>My take on AI</p>
+        <p class="eyebrow"><span class="num">05</span>My take on AI</p>
         <h2 class="title">Fast is useless if you can't trust it</h2>
         <p class="lead">What I've learned after using AI agents on production code every day, and write about openly.</p>
       </div>
@@ -722,7 +827,7 @@
   <section class="section" id="experience">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow"><span class="num">05</span>Experience</p>
+        <p class="eyebrow"><span class="num">06</span>Experience</p>
         <h2 class="title">Five years of shipping to real users</h2>
       </div>
       <div class="xp">
@@ -730,15 +835,16 @@
           <div><div class="when">Mar 2024 – Present</div><div class="where">Upstars · Warsaw, Poland</div></div>
           <div>
             <h3>Full Stack Engineer – React Native, React &amp; Backend</h3>
-            <p class="company">End-to-end ownership of mobile products, from architecture to App Store and post-release monitoring.</p>
+            <p class="company">End-to-end ownership of web and mobile products, from architecture to release and post-release monitoring.</p>
             <ul>
+              <li>Built high-load, user-facing React web services and the internal tools and dashboards the team works in every day</li>
               <li>Designed and shipped React Native + TypeScript apps end-to-end; managed the full App Store release cycle across multiple apps</li>
               <li>Worked across REST and GraphQL APIs, Node.js/NestJS services, PostgreSQL/MySQL, Docker and GCP Cloud Functions</li>
-              <li>Built internal React.js tools and dashboards; removed render bottlenecks on mobile and web</li>
+              <li>Removed render bottlenecks and unnecessary re-renders across both web and mobile codebases</li>
               <li>Built custom Claude Code subagents for code review, testing and automation; brought MCP tools into the team workflow</li>
               <li>Mentored React Native engineers and onboarded new hires</li>
             </ul>
-            <div class="tags"><span class="tag">React Native</span><span class="tag">TypeScript</span><span class="tag">Reanimated</span><span class="tag">GraphQL</span><span class="tag">NestJS</span><span class="tag">GCP</span><span class="tag">Fastlane</span><span class="tag">Claude Code</span></div>
+            <div class="tags"><span class="tag">React.js</span><span class="tag">React Native</span><span class="tag">TypeScript</span><span class="tag">Reanimated</span><span class="tag">GraphQL</span><span class="tag">NestJS</span><span class="tag">GCP</span><span class="tag">Fastlane</span><span class="tag">Claude Code</span></div>
           </div>
         </article>
         <article class="card job reveal">
@@ -786,7 +892,7 @@
   <section class="wrap">
     <div class="card band reveal">
       <div>
-        <p class="eyebrow"><span class="num">06</span>App Store expertise</p>
+        <p class="eyebrow"><span class="num">07</span>App Store expertise</p>
         <h2 class="title">I get apps through review</h2>
         <p class="lead" style="color: var(--text-dim)">Most teams fear App Review. I've dealt with it on multiple apps, from certificates to back-and-forth with the review team.</p>
         <div class="rejections">
@@ -809,7 +915,7 @@
   <!-- ── Writing ───────────────────────────────────────────────────── -->
   <section class="section" id="writing">
     <div class="wrap section-head center reveal">
-      <p class="eyebrow"><span class="num">07</span>Writing</p>
+      <p class="eyebrow"><span class="num">08</span>Writing</p>
       <h2 class="title">I write about building with AI, with the downsides too</h2>
       <p class="lead">Regular LinkedIn posts on engineering approaches, AI in real work, my projects and industry news.</p>
     </div>
@@ -840,22 +946,24 @@
   <section class="section" id="skills">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow"><span class="num">08</span>Toolkit</p>
+        <p class="eyebrow"><span class="num">09</span>Toolkit</p>
         <h2 class="title">Stack I ship with</h2>
       </div>
       <div class="skills">
         <div class="card skill-group reveal"><h3>Mobile</h3><div class="tags">
           <span class="tag hot">React Native</span><span class="tag hot">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Expo (managed &amp; bare)</span><span class="tag hot">Reanimated</span><span class="tag">React Navigation</span><span class="tag">Native modules (iOS/Android)</span><span class="tag">Swift · WidgetKit · ActivityKit</span></div></div>
-        <div class="card skill-group reveal" style="--rd: 80ms"><h3>State &amp; architecture</h3><div class="tags">
+        <div class="card skill-group reveal" style="--rd: 80ms"><h3>Web</h3><div class="tags">
+          <span class="tag hot">React.js</span><span class="tag hot">Next.js</span><span class="tag">Vite</span><span class="tag">Webpack</span><span class="tag">Tailwind CSS</span><span class="tag">Material UI</span><span class="tag">HTML5 / CSS3</span><span class="tag">Responsive design</span><span class="tag">Web performance</span></div></div>
+        <div class="card skill-group reveal"><h3>State &amp; architecture</h3><div class="tags">
           <span class="tag hot">Zustand</span><span class="tag">Redux / RTK Query</span><span class="tag">TanStack Query</span><span class="tag">Jotai</span><span class="tag">Context API</span><span class="tag">Clean Architecture</span><span class="tag">MVVM</span><span class="tag">SOLID &amp; GRASP</span></div></div>
-        <div class="card skill-group reveal"><h3>Backend &amp; cloud</h3><div class="tags">
+        <div class="card skill-group reveal" style="--rd: 80ms"><h3>Backend &amp; cloud</h3><div class="tags">
           <span class="tag hot">Firebase</span><span class="tag">Node.js</span><span class="tag">NestJS</span><span class="tag">REST</span><span class="tag">GraphQL</span><span class="tag">WebSocket</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">SQLite</span><span class="tag">Docker</span><span class="tag">GCP</span><span class="tag">AWS</span><span class="tag">OAuth / JWT</span></div></div>
-        <div class="card skill-group reveal" style="--rd: 80ms"><h3>Device features</h3><div class="tags">
+        <div class="card skill-group reveal"><h3>Device features</h3><div class="tags">
           <span class="tag hot">Live Activities &amp; Dynamic Island</span><span class="tag">Widgets</span><span class="tag hot">Background audio</span><span class="tag">Push (FCM / APNs)</span><span class="tag">Local notifications</span><span class="tag hot">RevenueCat IAP</span><span class="tag">Geolocation &amp; Maps</span><span class="tag">Video</span><span class="tag">MMKV / AsyncStorage</span></div></div>
-        <div class="card skill-group reveal"><h3>AI-assisted development</h3><div class="tags">
+        <div class="card skill-group reveal" style="--rd: 80ms"><h3>AI-assisted development</h3><div class="tags">
           <span class="tag hot">Claude Code</span><span class="tag hot">Anthropic API</span><span class="tag">Multi-step agents</span><span class="tag">Subagents</span><span class="tag">Context7 MCP</span><span class="tag">Figma MCP</span><span class="tag">Structured output</span></div></div>
-        <div class="card skill-group reveal" style="--rd: 80ms"><h3>Release, quality &amp; web</h3><div class="tags">
-          <span class="tag hot">Fastlane</span><span class="tag">App Store Connect</span><span class="tag">Codemagic</span><span class="tag">GitHub Actions</span><span class="tag">Bitrise</span><span class="tag">Jest</span><span class="tag">Maestro E2E</span><span class="tag">Crashlytics</span><span class="tag">React.js</span><span class="tag">Next.js</span><span class="tag">Tailwind</span><span class="tag">Vite</span></div></div>
+        <div class="card skill-group reveal"><h3>Release &amp; quality</h3><div class="tags">
+          <span class="tag hot">Fastlane</span><span class="tag">App Store Connect</span><span class="tag">Codemagic</span><span class="tag">GitHub Actions</span><span class="tag">Bitrise</span><span class="tag">Jest</span><span class="tag">Maestro E2E</span><span class="tag">Crashlytics</span></div></div>
       </div>
       <p class="reveal" style="margin-top: 24px; color: var(--text-faint); font-size: 14.5px">Languages: Ukrainian (native) · English (B2) · Education: B.Sc. Software Engineering (in progress), Igor Sikorsky Kyiv Polytechnic Institute</p>
     </div>
@@ -866,7 +974,7 @@
     <div class="cta reveal">
       <img class="avatar" src="assets/maksym.png" alt="" width="96" height="96">
       <h2 class="title">Let's build something people keep on their Home Screen</h2>
-      <p class="lead">Looking for a senior React Native engineer who owns the whole path and gets real leverage from AI? I'd be glad to talk.</p>
+      <p class="lead">Looking for a senior React or React Native engineer who owns the whole path and gets real leverage from AI? I'd be glad to talk.</p>
       <div class="contact-row">
         <button class="btn btn-primary copy-email" id="copy-email" data-email="work.maksym.lomakin@gmail.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
@@ -972,6 +1080,7 @@
     var el = document.getElementById('typed');
     var phrases = [
       'shipping Peacera on the App Store',
+      'building React web services & internal tools',
       'writing SwiftUI widgets & Live Activities',
       'building Claude Code subagents',
       'wiring multi-step agents on the Anthropic API',
@@ -1040,6 +1149,29 @@
         })();
       })();
     }, { threshold: 0.4 }).observe(term);
+  })();
+
+  // Code tabs in the Web section: cycle while in view, stop once the viewer picks a tab.
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.code-tabs button'));
+    var panes = Array.prototype.slice.call(document.querySelectorAll('.code-pane'));
+    var index = 0, timer = null, visible = false, manual = REDUCE;
+    function show(i) {
+      index = i;
+      tabs.forEach(function (t, k) { t.classList.toggle('is-active', k === i); t.setAttribute('aria-selected', k === i ? 'true' : 'false'); });
+      panes.forEach(function (p, k) { p.classList.toggle('is-active', k === i); });
+    }
+    function schedule() {
+      clearTimeout(timer);
+      if (manual || !visible) return;
+      timer = setTimeout(function () { show((index + 1) % panes.length); schedule(); }, 3600);
+    }
+    tabs.forEach(function (t, i) { t.addEventListener('click', function () { manual = true; clearTimeout(timer); show(i); }); });
+    show(0);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; schedule(); }, { threshold: 0.4 })
+        .observe(document.querySelector('.code-card'));
+    }
   })();
 
   // LinkedIn posts grid (only when POSTS has entries).
